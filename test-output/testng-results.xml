@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1053" started-at="2018-10-12T02:19:33Z" finished-at="2018-10-12T02:19:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1053" started-at="2018-10-12T02:19:33Z" finished-at="2018-10-12T02:19:34Z">
+      <class name="mavenProject.Selenium.NewMain">
+        <test-method status="PASS" signature="GetDataClass()[pri:0, instance:mavenProject.Selenium.NewMain@63440df3]" name="GetDataClass" duration-ms="1009" started-at="2018-10-12T02:19:33Z" finished-at="2018-10-12T02:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetDataClass -->
+      </class> <!-- mavenProject.Selenium.NewMain -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
