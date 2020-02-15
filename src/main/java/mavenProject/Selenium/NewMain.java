@@ -17,6 +17,8 @@ public class NewMain {
 	
 	Globals gb = new Globals();
 	
+	//This is Main method
+	
 	@Test
 	public void GetDataClass() throws Exception{
 	try{
