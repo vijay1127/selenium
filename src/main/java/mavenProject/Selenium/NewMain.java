@@ -15,6 +15,8 @@ import org.testng.annotations.Test;
 
 public class NewMain {
 	
+	//This is a comment in class main
+	
 	Globals gb = new Globals();
 	
 	@Test
