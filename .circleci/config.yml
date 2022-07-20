@@ -2,6 +2,10 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs:
+  snyk: snyk/snyk@1.2.3
+
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -17,6 +21,19 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  snyk-app-scan:
+    docker:
+      - image: 'openjdk:17-oracle'
+      steps:
+        - snyk/scan:
+          docker-image-name: openjdk:17-oracle
+          fail-on-issues: false
+          severity-threshold: critical
+          token-variable: SNYK_TOKEN 
+        - snyk/scan:
+          fail-on-issues: false
+          severity-threshold: critical
+          token-variable: SNYK_TOKEN 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -24,3 +41,9 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - snyk-app-scan:
+        context: dev
+        name: snyk-app-scan
+        requires:
+          - build
+
