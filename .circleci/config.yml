@@ -44,6 +44,4 @@ workflows:
       - snyk-app-scan:
         context: dev
         name: snyk-app-scan
-        requires:
-          - build
 
