@@ -23,13 +23,13 @@ jobs:
   snyk-app-scan:
     docker:
       - image: 'openjdk:17-oracle'
-      steps:
-        - snyk/scan:
+    steps:
+      - snyk/scan:
           docker-image-name: openjdk:17-oracle
           fail-on-issues: false
           severity-threshold: critical
           token-variable: SNYK_TOKEN 
-        - snyk/scan:
+      - snyk/scan:
           fail-on-issues: false
           severity-threshold: critical
           token-variable: SNYK_TOKEN 
@@ -41,6 +41,5 @@ workflows:
     jobs:
       - say-hello
       - snyk-app-scan:
-        context: dev
-        name: snyk-app-scan
-
+          context: dev
+          name: snyk-app-scan
