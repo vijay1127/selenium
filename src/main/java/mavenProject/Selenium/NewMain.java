@@ -15,8 +15,7 @@ import org.testng.annotations.Test;
 
 public class NewMain {
 	
-	//This is a comment in class main
-	
+	//Added a comment to show on how the git works
 	Globals gb = new Globals();
 	
 	@Test
